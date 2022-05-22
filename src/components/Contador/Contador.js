@@ -11,6 +11,7 @@ console.log(numero)
         setNumero(numero+1)
     }
 
+    
     const menos  = () => {
 
         setNumero(numero-1)

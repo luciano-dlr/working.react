@@ -15,6 +15,7 @@ function App() {
       <header className="App-header">
         <NavBar boton1={'comprar'} boton2={'mi carrito'} boton3={'historial'} boton4={'categorias'} />
         <Contador/>
+        <Contador/>
         <ItemListContainer greeting='BIENVENIDO USUARIO' />
         <CartWidget/>
         <h1 style={{ color: 'yellow', marginBottom: '3%' }} onClick={() => console.log('hice click')}>MERCADO LIBRE</h1>
