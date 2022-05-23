@@ -9,16 +9,15 @@ import Contador from './components/Contador/Contador';
 
 function App() {
 
-  
+
   return (
     <div className="App">
       <header className="App-header">
         <NavBar boton1={'comprar'} boton2={'mi carrito'} boton3={'historial'} boton4={'categorias'} />
-        <Contador/>
-        <Contador/> 
+        <h1 style={{ color: 'yellow' }} onClick={() => console.log('hice click')}>MERCADO LIBRE</h1>
         <ItemListContainer greeting='BIENVENIDO USUARIO' />
-        <CartWidget/>
-        <h1 style={{ color: 'yellow', marginBottom: '3%' }} onClick={() => console.log('hice click')}>MERCADO LIBRE</h1>
+        <CartWidget />
+        <Contador />
 
       </header>
     </div>
