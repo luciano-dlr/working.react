@@ -1,42 +1,46 @@
 import './Contador.css'
 import React, { useState } from 'react'
 
-const Contador = () => {
 
-  const [numero, setNumero] = useState(1)
+export const Contador = ({ stock, initial, onAdd }) => {
 
-  console.log(numero)
+  const [numero, setNumero] = useState(initial)
+
   const mas = () => {
-    if (numero < 10) {
+    if (numero < stock) {
       setNumero(numero + 1)
 
     }
   }
 
-
   const menos = () => {
     if (numero > 1) {
       setNumero(numero - 1)
+
     }
+
   }
 
-  const reset = () => {
-    setNumero(numero * 0)
+  const comprar = () => {
+    onAdd(numero);
+    setNumero(1)
   }
 
   return (
-    <div className='d-flex align-items-center justify-content-center white'>
+    <div className='d-flex align-items-center justify-content-center white ' style={{ backgroundColor: 'white' }}>
+
       <button className="btn btn-outline-dark" onClick={mas}> + </button>
-      <span>{numero}</span>
+      <span className='text-dark'>{numero}</span>
       <button className="btn btn-outline-dark" onClick={menos}> - </button>
       <div >
-        <button className="btn btn-outline-dark" onClick={reset}>Comprar</button>
+        <button className="btn btn-outline-dark" onClick={comprar}>Comprar</button>
+
       </div>
+
     </div>
   )
 }
 
 
-export default Contador
 
 
